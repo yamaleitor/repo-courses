@@ -14,31 +14,26 @@
     <script>
 
         function saltarLinea() {
-
             document.write("<br>")
             document.write("<br>")
             document.write("<br>")
-
         }
 
         function imprimir(mensaje) {
-
             document.write(mensaje);
             saltarLinea();
-
         }
 
         function calcularImc(peso, altura) {
             return peso / (altura * altura);
         }
 
-        var imcChristian = calcularImc(71, 1.72);
-        var imcFelipe = calcularImc(75, 1.73);
-        var promedio = (imcChristian + imcFelipe) / 2;
-        var promedio2 = ((calcularImc(65, 1.68) + calcularImc(55, 1.60)) / 2);
-
-        imprimir("El promedio del IMC calculado de Christian y Felipe es: " + promedio);
-        imprimir("El promedio del IMC calculado de Gabriela y Luisa es: " + promedio2);
+        var nombre = prompt("Escribe tu nombre");
+        alert("Hola " + nombre + ", bienvenid@!")
+        var pesoInput = prompt("Ingresa tu peso en Kilos(kg)");
+        var alturaInput = prompt("Ingresa tu altura en metros(m)");
+        var imcCalculado = calcularImc(pesoInput, alturaInput);
+        imprimir("El IMC calculado es: " + imcCalculado);
 
     </script>
 </body>
